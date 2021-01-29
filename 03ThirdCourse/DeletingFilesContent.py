@@ -1,0 +1,8 @@
+f = open("E:/osvaldo/PythonExercises/03ThirdCourse/test.txt", "r+")
+print(f)
+print(f.read())
+f.seek(0)
+print(len(f.read()))
+f.seek(0)
+f.truncate(10)
+f.close()

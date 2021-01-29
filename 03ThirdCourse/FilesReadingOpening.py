@@ -20,3 +20,4 @@ for line in my_file.readlines():
     if line.startswith("A"):
         print(line)
 
+my_file.close()
