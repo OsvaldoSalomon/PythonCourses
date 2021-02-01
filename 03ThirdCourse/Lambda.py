@@ -24,3 +24,11 @@ b = lambda mylist: [x * y for x in range(10) for y in range(5)] + mylist
 
 print(b)
 print(b([100, 101, 102]))
+
+r1 = range(10, 20)
+
+ex = lambda exercise: [x for x in r1 if x < 16]
+
+print(ex([r1]))
+
+print(list(filter(lambda a: a < 16, r1)))
