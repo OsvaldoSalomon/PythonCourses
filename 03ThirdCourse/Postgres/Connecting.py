@@ -8,5 +8,7 @@ else:
     print("Connection to database was successful!")
 
 
-
+# records = cursor.fetchone()
+# for i in records:
+#     print(i)
 
