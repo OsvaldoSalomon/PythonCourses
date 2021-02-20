@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Blog articles(not fake)</title>
+    <style>
+        input {display: block;}
+        textarea {display: block;}
+    </style>
 </head>
 <body>
+<form method="post">
+    {% csrf_token %}
+    <label style="font-size: large; font-family: Arial,serif" for="title">Title: </label>
+    <input style="font-size: large; font-family: Arial,serif" type="text" id="title" name="title">
+    <label style="font-size: large; font-family: Arial,serif" for="category">Category: </label>
+    <input style="font-size: large; font-family: Arial,serif" type="text" id="category" name="category">
+    <label style="font-size: large; font-family: Arial,serif" for="author">Author: </label>
+    <input style="font-size: large; font-family: Arial,serif" type="text" id="author" name="author">
+    <label style="font-size: large; font-family: Arial,serif" for="content">Content: </label>
+    <textarea style="font-size: large; font-family: Arial,serif" name="content" id="content" cols="50" rows="4"></textarea>
+    <input style="font-size: large; font-family: Arial,serif" type="submit" value="Create Article">
+</form>
 <ul>
     {% for article in articles %}
     <li>
