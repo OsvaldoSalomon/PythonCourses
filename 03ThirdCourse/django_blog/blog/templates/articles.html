@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog articles(not fake)</title>
+</head>
+<body>
+<ul>
+    {% for article in articles %}
+    <li>
+        <p style="font-size: large; font-family: Arial,serif"><b>Title:</b> {{article.title}}</p>
+        <p style="font-size: large; font-family: Arial,serif"><b>Category:</b> {{article.category}}</p>
+        <p style="font-size: large; font-family: Arial,serif"><b>Created by:</b> {{article.author}}</p>
+        <p style="font-size: large; font-family: Arial,serif"><b>Posted at:</b> {{article.creation_date}}</p>
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
