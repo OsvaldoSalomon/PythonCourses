@@ -9,3 +9,6 @@ class ArticleModel(models.Model):
     author = models.CharField(max_length=100)
     content = models.TextField()
     creation_date = models.DateTimeField()
+
+    def __str__(self):
+        return self.title

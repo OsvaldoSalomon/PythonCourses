@@ -11,14 +11,7 @@
 <body>
 <form method="post">
     {% csrf_token %}
-    <label style="font-size: large; font-family: Arial,serif" for="title">Title: </label>
-    <input style="font-size: large; font-family: Arial,serif" type="text" id="title" name="title">
-    <label style="font-size: large; font-family: Arial,serif" for="category">Category: </label>
-    <input style="font-size: large; font-family: Arial,serif" type="text" id="category" name="category">
-    <label style="font-size: large; font-family: Arial,serif" for="author">Author: </label>
-    <input style="font-size: large; font-family: Arial,serif" type="text" id="author" name="author">
-    <label style="font-size: large; font-family: Arial,serif" for="content">Content: </label>
-    <textarea style="font-size: large; font-family: Arial,serif" name="content" id="content" cols="50" rows="4"></textarea>
+    {{ form }}
     <input style="font-size: large; font-family: Arial,serif" type="submit" value="Create Article">
 </form>
 <ul>
@@ -28,6 +21,8 @@
         <p style="font-size: large; font-family: Arial,serif"><b>Category:</b> {{article.category}}</p>
         <p style="font-size: large; font-family: Arial,serif"><b>Created by:</b> {{article.author}}</p>
         <p style="font-size: large; font-family: Arial,serif"><b>Posted at:</b> {{article.creation_date}}</p>
+        <a style="font-size: large; font-family: Arial,serif" href="http://localhost:8080/blog/articles/{{ article.id }}">Read the article</a>
+
     </li>
     {% endfor %}
 </ul>
