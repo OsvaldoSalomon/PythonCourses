@@ -1,5 +1,5 @@
 from rest_framework import serializers
-import models
+from restapi import models
 
 
 class Expense(serializers.ModelSerializer):
