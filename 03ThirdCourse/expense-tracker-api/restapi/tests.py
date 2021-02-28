@@ -3,7 +3,6 @@ from unittest import TestCase
 
 
 # Create your tests here.
-# This test should fail
 def two_integers_sum(a, b):
     return 0
 
